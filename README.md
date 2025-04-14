@@ -18,7 +18,7 @@ Steps for your preferred development enviroment are below.
 
 ### OpenOCD + GDB
 1. Run `openocd` (uses settings in openocd.cfg)
-2. From another terminal, run `gdb -q -x target/thumbv7em-none-eabihf/debug/{{project-name}}` (uses settings in openocd.gdb)
+2. From another terminal, run `gdb-multiarch -q -x openocd.gdb target/thumbv7em-none-eabihf/debug/{{project-name}}` (uses settings in openocd.gdb)
 
 ### probe-rs
 1. To flash/execute, run `cargo run` (.cargo/config.toml includes runner setting for probe-rs)
